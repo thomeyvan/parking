@@ -1,3 +1,16 @@
 spring:
   application:
     name: parking
+
+parking:
+  default-radius-meters: 1000
+  default-limit: 20
+  cache-ttl: 30s
+  connect-timeout: 2s
+  read-timeout: 3s
+  tenants:
+    - id: poitiers
+      name: Grand Poitiers
+      format: ods-parking
+      url: https://data.grandpoitiers.fr/data-fair/api/v1/datasets/mobilites-stationnement-des-parkings-en-temps-reel/lines
+      zone: { min-latitude: 46.3051556, max-latitude: 46.7852034, min-longitude: -0.0471733, max-longitude: 0.7745855 }
